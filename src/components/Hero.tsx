@@ -5,7 +5,7 @@ const Container = styled.div``;
 
 type HeroProps = {};
 
-const Hero: React.FunctionComponent<HeroProps> = ({ children }) => (
+const Hero: React.FC<HeroProps> = ({ children }) => (
   <Container>{children}</Container>
 );
 

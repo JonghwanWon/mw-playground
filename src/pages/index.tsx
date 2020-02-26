@@ -2,14 +2,22 @@ import { NextPage } from 'next';
 import * as React from 'react';
 
 import Hero from '@src/components/Hero';
-import Layout from '@src/components/Layout';
+import { GlobalLayout } from '@src/components/layouts';
 
-type MainProps = {};
+type HomeProps = {};
 
-const Main: NextPage<MainProps> = ({}) => (
-  <Layout title="playground">
+const Home: NextPage<HomeProps> = ({}) => (
+  <GlobalLayout title="Home">
     <Hero>hi</Hero>
-  </Layout>
+  </GlobalLayout>
 );
 
-export default Main;
+Home.getInitialProps = async ({}) => {
+  try {
+    return {};
+  } catch (err) {
+    return { errors: err.message };
+  }
+};
+
+export default Home;

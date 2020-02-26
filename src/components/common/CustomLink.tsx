@@ -6,7 +6,7 @@ type CustomLinkProps = {
   as?: string;
 };
 
-const CustomLink: React.FunctionComponent<CustomLinkProps> = ({
+const CustomLink: React.FC<CustomLinkProps> = ({
   children,
   ...rest
 }) => (

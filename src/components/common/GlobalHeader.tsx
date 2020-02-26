@@ -9,7 +9,7 @@ const StyledNav = styled.nav``;
 
 type GlobalHeaderProps = {};
 
-const GlobalHeader: React.FunctionComponent<GlobalHeaderProps> = ({}) => (
+const GlobalHeader: React.FC<GlobalHeaderProps> = ({}) => (
   <StyledHeader>
     <StyledNav>
       <CustomLink href="/">Home</CustomLink>

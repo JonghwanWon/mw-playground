@@ -9,7 +9,7 @@ const Devider = styled.hr``;
 
 type FooterProps = {};
 
-const Footer: React.FunctionComponent<FooterProps> = ({}) => (
+const Footer: React.FC<FooterProps> = ({}) => (
   <StyledFooter>
     <Devider />
   </StyledFooter>
