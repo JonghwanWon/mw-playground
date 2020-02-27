@@ -1,5 +1,11 @@
 import { darken } from 'polished';
 
+// Primary color
+const baseColors = {
+  primary: "#5c6bc0",
+  secondary: "#485b6f"
+};
+
 // Grayscale colors
 const white = "#fff";
 const grayscale = {
@@ -14,8 +20,9 @@ const grayscale = {
   gray15: darken(0.85, white)
 };
 
-export type Colors = typeof grayscale;
+export type Colors = typeof grayscale & typeof baseColors;
 
 export const colors: Colors = {
-  ...grayscale
+  ...grayscale,
+  ...baseColors
 };

@@ -1,4 +1,6 @@
-import { configure, addParameters } from "@storybook/react";
+import { configure, addParameters, addDecorator } from "@storybook/react";
+import { ThemeProvider } from "styled-components";
+import { theme } from "@src/theme";
 
 addParameters({
   backgrounds: [
@@ -6,6 +8,12 @@ addParameters({
     { name: "facebook", value: "#3b5998" }
   ]
 });
+
+addDecorator(StoryFn => (
+  <ThemeProvider theme={theme}>
+    <StoryFn />
+  </ThemeProvider>
+));
 
 const req = require.context("../src/components", true, /.stories.tsx$/);
 function loadStories() {

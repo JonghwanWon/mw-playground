@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Button from '@src/components/Button';
+import { DefaultButton } from '@src/components/Buttons';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { text, select, withKnobs } from '@storybook/addon-knobs';
@@ -11,11 +11,11 @@ storiesOf("Button", module)
   .addDecorator(withKnobs)
   .add("Button", () => {
     const message = text("message", "message");
-    const type = select("type", ["button", "reset", "submit"], "button");
+    const variant = select("variant", ["primary", "secondary"], "primary");
 
     return (
-      <Button type={type} onClick={action("action")}>
+      <DefaultButton variant={variant} onClick={action("action")}>
         {message}
-      </Button>
+      </DefaultButton>
     );
   });
