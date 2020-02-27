@@ -1,14 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { buttonVariants } from './theme/variantStyles';
+import { buttonVariants, VariantType } from './theme/variantStyles';
 
 type HTMLButtonType = Pick<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   "type" | "onClick"
 >;
-
-export type VariantType = "primary" | "secondary";
 
 export type BaseButtonProps = HTMLButtonType & {
   variant?: VariantType;
@@ -20,7 +18,7 @@ type StyledBaseButtonProps = {
 
 export const BaseButton = styled.button<StyledBaseButtonProps>`
   position: relative;
-  padding: 0.65rem 1.25rem;
+  padding: 6px 12px;
   border-radius: 2px;
   font-size: 14px;
   overflow: hidden;

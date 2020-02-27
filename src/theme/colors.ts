@@ -2,8 +2,16 @@ import { darken } from 'polished';
 
 // Primary color
 const baseColors = {
-  primary: "#5c6bc0",
-  secondary: "#485b6f"
+  primary: "#3f6ad8",
+  secondary: "#6c757d",
+  success: "#3ac47d",
+  info: "#16aaff",
+  warning: "#f7b924",
+  danger: "#d92550",
+  focus: "#444054",
+  alt: "#794c8a",
+  light: "#eeeeee",
+  dark: "#343a40"
 };
 
 // Grayscale colors
